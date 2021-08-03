@@ -1,8 +1,16 @@
+import Header from './components/Header';
+import styled from '@emotion/styled';
+
+const AppContainer = styled.main`
+	width: 80%;
+	margin: 0 auto;
+`;
+
 function App() {
 	return (
-		<div className='App'>
-			<h1>Hello</h1>
-		</div>
+		<AppContainer>
+			<Header />
+		</AppContainer>
 	);
 }
 
