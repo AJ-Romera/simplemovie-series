@@ -2,10 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 function MovieComponent() {
-	const movies = useSelector((state) => state);
+	const movies = useSelector((state) => state.allMovies.movies);
+	const { imdbID, Title } = movies[0];
 	return (
 		<div>
-			<h1>MovieComponent</h1>
+			<header>{Title}</header>
+			<p>{imdbID}</p>
 		</div>
 	);
 }
