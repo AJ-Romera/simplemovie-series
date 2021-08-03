@@ -1,10 +1,11 @@
 :root {
-	--desaturated-dark-cyan: hsl(180, 29%, 50%);
+	/* --desaturated-dark-cyan: hsl(180, 29%, 50%);
 	--light-grayish-cyan-bg: hsl(180, 52%, 96%);
 	--light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
 	--dark-grayish-cyan: hsl(180, 8%, 52%);
-	--very-dark-grayish-cyan: hsl(180, 14%, 20%);
-	--spartan-font: 'Spartan', sans-serif;
+	--very-dark-grayish-cyan: hsl(180, 14%, 20%); */
+	--stix-two-font: 'STIX Two Text', serif;
+	--roboto-slab-font: 'Roboto Slab', serif;
 }
 
 html {
@@ -22,9 +23,9 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 0.938rem;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-		'Helvetica Neue', sans-serif;
+	font-family: var(--roboto-slab-font), -apple-system, BlinkMacSystemFont,
+		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -33,7 +34,7 @@ h1,
 h2,
 h3 {
 	margin-top: 0;
-	/* font-family: var(--spartan-font); */
+	font-family: var(--stix-two-font);
 	font-weight: 700;
 }
 
