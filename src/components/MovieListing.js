@@ -6,8 +6,6 @@ import MovieComponent from './MovieComponent';
 
 function MovieListing() {
 	const movies = useSelector((state) => state);
-	console.log('Movies ', movies);
-
 	const dispatch = useDispatch();
 
 	const fetchMovies = async () => {
@@ -21,7 +19,10 @@ function MovieListing() {
 
 	useEffect(() => {
 		fetchMovies();
+		//eslint-disable-next-line
 	}, []);
+
+	console.log('Movies ', movies);
 
 	return (
 		<div>

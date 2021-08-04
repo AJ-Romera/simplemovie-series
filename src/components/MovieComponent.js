@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const MovieComponent = () => {
-	const movies = useSelector((state) => state.allMovies.movies.Search);
-	console.log(movies);
+	const movies = useSelector((state) => state.allMovies.movies);
+	console.log('hola ', movies.Search);
 
-	const renderList = movies.map((movie) => {
+	const movieList = movies.Search.map((movie) => {
 		const { Title, Year, imdbID, Type, Poster } = movie;
 		return (
 			<div>
@@ -21,7 +21,7 @@ const MovieComponent = () => {
 		);
 	});
 
-	return <>{renderList}</>;
+	return <div>{movieList}</div>;
 };
 
 export default MovieComponent;
