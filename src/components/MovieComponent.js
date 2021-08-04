@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const MovieComponent = () => {
 	const movies = useSelector((state) => state.allMovies.movies);
-	console.log('hola ', movies.Search);
+	console.log('Movies ', movies.Search);
 
 	const movieList = movies.Search.map((movie) => {
 		const { Title, Year, imdbID, Type, Poster } = movie;

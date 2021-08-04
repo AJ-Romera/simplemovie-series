@@ -2,13 +2,16 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectedMovie } from '../redux/actions/movieActions';
+import {
+	selectedMovie,
+	removeSelectedMovie,
+} from '../redux/actions/movieActions';
 
 function MovieDetails() {
 	const movie = useSelector((state) => state.movie);
 	const { imdbID } = useParams();
-	console.log(movie);
 	const dispatch = useDispatch();
+	console.log(movie);
 
 	const fetchMovieDetail = async () => {
 		const response = await axios
@@ -19,9 +22,20 @@ function MovieDetails() {
 		dispatch(selectedMovie(response.data));
 	};
 
+	useEffect(() => {
+		if (imdbID && imdbID !== '') fetchMovieDetail(imdbID);
+		return () => {
+			dispatch(removeSelectedMovie());
+		};
+	}, [imdbID]);
+
 	return (
 		<div>
-			<h1>MovieDetails</h1>
+			{Object.keys(movie).length === 0 ? (
+				<div>...Loading</div>
+			) : (
+				<h1>Ok</h1>
+			)}
 		</div>
 	);
 }

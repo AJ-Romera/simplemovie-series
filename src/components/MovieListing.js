@@ -7,6 +7,7 @@ import MovieComponent from './MovieComponent';
 function MovieListing() {
 	const movies = useSelector((state) => state);
 	const dispatch = useDispatch();
+	console.log('Movies ', movies);
 
 	const fetchMovies = async () => {
 		const response = await axios
@@ -21,8 +22,6 @@ function MovieListing() {
 		fetchMovies();
 		//eslint-disable-next-line
 	}, []);
-
-	console.log('Movies ', movies);
 
 	return (
 		<div>

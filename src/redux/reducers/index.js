@@ -3,7 +3,7 @@ import { movieReducer, SelectedMovieReducer } from './movieReducer';
 
 const reducers = combineReducers({
 	allMovies: movieReducer,
-	Movie: SelectedMovieReducer,
+	movie: SelectedMovieReducer,
 });
 
 export default reducers;
