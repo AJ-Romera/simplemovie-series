@@ -1,4 +1,15 @@
+import axios from 'axios';
 import { ActionTypes } from '../types/action-types';
+
+export const fetchMovies = async () => {
+	const response = await axios.get(`/?apikey=1d046177&s=avengers`);
+	console.log(response);
+
+	return {
+		type: ActionTypes.SET_MOVIES,
+		payload: response,
+	};
+};
 
 export const setMovies = (movies) => {
 	return {
