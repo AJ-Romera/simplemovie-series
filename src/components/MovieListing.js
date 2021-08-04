@@ -9,15 +9,6 @@ function MovieListing() {
 	const dispatch = useDispatch();
 	console.log('Movies ', movies);
 
-	/* const fetchMovies = async () => {
-		const response = await axios
-			.get('https://www.omdbapi.com/?apikey=1d046177&s=avengers')
-			.catch((err) => {
-				console.log('Err ', err);
-			});
-		dispatch(setMovies(response.data));
-	}; */
-
 	useEffect(() => {
 		dispatch(fetchMovies());
 		//eslint-disable-next-line

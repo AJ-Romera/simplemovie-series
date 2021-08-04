@@ -1,14 +1,14 @@
-import axios from 'axios';
+import omdbApi from '../../apis/ombdApi';
 import { ActionTypes } from '../types/action-types';
 
-export const fetchMovies = async () => {
-	const response = await axios.get(`/?apikey=1d046177&s=avengers`);
-	console.log(response);
+export const fetchMovies = () => async (dispatch) => {
+	const response = await omdbApi.get(`/?apikey=1d046177&s=avengers`);
+	dispatch({ type: ActionTypes.FETCH_MOVIES, payload: response.data });
+};
 
-	return {
-		type: ActionTypes.SET_MOVIES,
-		payload: response,
-	};
+export const fetchMovie = (imdbID) => async (dispatch) => {
+	const response = await omdbApi.get(`/?apikey=1d046177&i=${imdbID}`);
+	dispatch({ type: ActionTypes.SELECTED_MOVIE, payload: response.data });
 };
 
 export const setMovies = (movies) => {
