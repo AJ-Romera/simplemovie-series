@@ -1,5 +1,3 @@
-# I WILL NOT CONTINUE THIS PROJECT
+# I will continue this project now
 
-I found out I need more practice with Redux and Middlewares. I´m problem I found is that when I Reload/Refresh the web, the state is lost and I don´t find a good fix for this.
-
-Now I´m gonna watch Redux tutorials and practice on another project. Maybe I come back and finish this project in the future.
+Last week I leave this project because I wasn´t sure of what I was doing with redux. I have practiced Redux since then and now I can fix and finish this project
