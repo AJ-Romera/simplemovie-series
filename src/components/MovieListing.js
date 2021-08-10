@@ -13,7 +13,11 @@ function MovieListing() {
 		//eslint-disable-next-line
 	}, []);
 
-	return <div>{/* <MovieComponent /> */}</div>;
+	return (
+		<div>
+			{movies.allMovies.movies ? <MovieComponent /> : 'Loading movies...'}
+		</div>
+	);
 }
 
 export default MovieListing;
