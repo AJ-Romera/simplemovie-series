@@ -9,7 +9,7 @@ const MovieComponent = () => {
 	const movieList = movies.map((movie) => {
 		const { Title, Year, imdbID, Type, Poster } = movie;
 		return (
-			<div>
+			<div key={imdbID}>
 				<Link to={`/movie/${imdbID}`}>
 					<p>{Title}</p>
 				</Link>

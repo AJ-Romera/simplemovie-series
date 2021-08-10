@@ -2,8 +2,8 @@ import { ActionTypes } from '../types/action-types';
 
 export const movieReducer = (state = [], { type, payload }) => {
 	switch (type) {
-		case ActionTypes.SET_MOVIES:
-			return { ...state, movies: payload };
+		/* case ActionTypes.SET_MOVIES:
+			return { ...state, movies: payload }; */
 		case ActionTypes.FETCH_MOVIES:
 			return { ...state, movies: payload };
 
@@ -12,7 +12,7 @@ export const movieReducer = (state = [], { type, payload }) => {
 	}
 };
 
-export const SelectedMovieReducer = (state = {}, { type, payload }) => {
+export const selectedMovieReducer = (state = {}, { type, payload }) => {
 	switch (type) {
 		case ActionTypes.SELECTED_MOVIE:
 			return { ...state, ...payload };

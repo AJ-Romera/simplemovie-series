@@ -11,12 +11,12 @@ export const fetchMovie = (imdbID) => async (dispatch) => {
 	dispatch({ type: ActionTypes.SELECTED_MOVIE, payload: response.data });
 };
 
-export const setMovies = (movies) => {
+/* export const setMovies = (movies) => {
 	return {
 		type: ActionTypes.SET_MOVIES,
 		payload: movies,
 	};
-};
+}; */
 
 export const selectedMovie = (movie) => {
 	return {
