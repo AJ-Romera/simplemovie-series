@@ -1,3 +1,3 @@
-# I will continue this project now
+# Please ignore this project
 
-Last week I leave this project because I wasn´t sure of what I was doing with redux. I have practiced Redux since then and now I can fix and finish this project
+This is just for practicing Redux
